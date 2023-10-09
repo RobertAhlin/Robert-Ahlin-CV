@@ -8,10 +8,9 @@ function userInformationHTML(user) {
         <div class="gh-content">
             <div class="gh-avatar">
                 <a href="${user.html_url}" target="_blank">
-                    <img src="${user.avatar_url}" width="80" height="80" alt="${user.login}" />
-                </a>
+                    <img src="${user.avatar_url}" width="40" height="40" alt="${user.login}" />
+                </a>Repos: ${user.public_repos} | Followers: ${user.followers} - Following ${user.following}
             </div>
-            <p>Followers: ${user.followers} - Following ${user.following} <br> Repos: ${user.public_repos}</p>
         </div>`;
 }
 
