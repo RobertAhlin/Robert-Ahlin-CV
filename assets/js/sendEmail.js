@@ -2,7 +2,7 @@ function sendMail(contactForm) {
     emailjs.send("service_ipclfkf", "rahlin_cv-site", {
         "from_name": contactForm.name.value,
         "from_email": contactForm.emailaddress.value,
-        "message": contactForm.projectsummary.value
+        "message": contactForm.messagelines.value
     })
         .then(
             function (response) {
