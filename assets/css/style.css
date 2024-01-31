@@ -314,6 +314,12 @@ footer .cv-pdf i:hover {
     margin: 40px 20px;
 }
 
+.scrolling {
+    height: 200px; /* Set a fixed height for the div */
+    overflow: auto; /* Add the overflow property to enable scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for better visualization */
+  }
+
 
 /*--------------------------------------------Work History*/
 
