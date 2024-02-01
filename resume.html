@@ -12,7 +12,10 @@
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
 </head>
 
 <body>
@@ -48,7 +51,7 @@
                                         aria-hidden="true"></i><span>Interests</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-github menuitem">
-                                <a href="github.html" class="hvr-sweep-to-bottom"><i class="fa fa-github"
+                                <a href="github.html" class="hvr-sweep-to-bottom"><i class="fa-brands fa-github"
                                         aria-hidden="true"></i><span>GitHub</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-download menuitem">
@@ -63,7 +66,7 @@
     </header>
 <section class="container-fluid">
     <div class="row">
-        <div class="col-md-4 bg-color-work-history section-column">
+        <div class="col-md-4 bg-color-work-history section-column, scrolling">
             <div class="row">
                 <div class="col-12">
                     <h3 class="history-heading uppercase">
@@ -71,30 +74,148 @@
                     </h3>
                 </div>
             </div>
-            <div class="history-items, scrolling">
-                <div class="timeline-item" data-dates="Jan 2023">
-                    <h4>i4 Solutions AB</h4>
+            <div class="history-items">
+                <div class="timeline-item" data-dates="Jan 2023 -">
+                    <h4 class="work-link" onclick="openModal('i4 Solutions AB',
+                                                            'Sideline work, own company:' +
+                                                            '\n- Mainly creating online video contents for educational purpose.' +
+                                                            '\n- VBA Programming.')">i4 Solutions AB</h4>
                     <p>Sideline work, own company</p>
                 </div>
+                
                 <div class="timeline-item" data-dates="Dec 2021 - Aug 2023">
-                    <h4>Good Solutions AB</h4>
+                    <h4 class="work-link" onclick="openModal('Good Solutions AB',
+                                                            'Application consultant:' +
+                                                            '\n - Project coordinator for implementation of software.' +
+                                                            '\n - Training user, super users, production management.' +
+                                                            '\n - Help organization to work with process improvement.' +
+                                                            '\n Lean etc.')">Good Solutions AB</h4>
                     <p>Application consultant</p>
                 </div>
-                <div class="timeline-item" data-dates="Nov 2021 - Sep 2016">
-                    <h4>Kardex Remstar AB</h4>
+                
+                <div class="timeline-item" data-dates="Sep 2016 - Nov 2021">
+                    <h4 class="work-link" onclick="openModal('Kardex Remstar AB',
+                                                            'Software consultant:' +
+                                                            '\n- Project coordinator for installation and implementation of software for warehouse vending machines.' +
+                                                            '\n - Installation of Microsoft SQL and databases.' +
+                                                            '\n - Training of Operators and Superusers.' +
+                                                            '\n - Support for sales organization and back office. ')">Kardex Remstar AB</h4>
                     <p>Software consultant</p>
                 </div>
-                <div class="timeline-item" data-dates="June 2001 - Aug 2003">
-                    <h4>Falbygdens Ost</h4>
-                    <p>Warehouse, IT On Site, Lean Coordinator</p>
+                
+                <div class="timeline-item" data-dates="Apr 2016 - Aug 2016">
+                    <h4 class="work-link" onclick="openModal('Falbygdens Ost',
+                                                            'IT On Site:' +
+                                                            '\n- Orderflex. Responsible for the software, article data, label design and controls functions in printers.' +
+                                                            '\n- Office with in-depth knowledge of Excel with VBA programming, functions, diagrams and presentations.' +
+                                                            '\n- Production IT with responsibility for VMWare, Network, Backup, WSUS and VLAN' +
+                                                            '\n- RMS (Recipe Management System) Management of article database with information for labelling products.' +
+                                                            '\n- SharePoint with management of team sites and documents.' +
+                                                            '\n- Implementation of Business Systems, Production Networks and Domain Controls.' +
+                                                            '\n- Change Management in identifying shortcomings and improvements in the introduction of new systems.')">Falbygdens Ost</h4>
+                    <p>IT On Site</p>
                 </div>
-                <div class="timeline-item" data-dates="Sep 2003 - June 2004">
-                    <h4>Högstadieskolan Stenstorp</h4>
+                
+                <div class="timeline-item" data-dates="Apr 2015 - Apr 2015">
+                    <h4 class="work-link" onclick="openModal('Falbygdens Ost',
+                                                            'SuperUser:' +
+                                                            '\n- Orderflex. Responsible for the software, article data, label design and controls functions in printers.' +
+                                                            '\n- Handle Excel with VBA programming, functions, diagrams and presentation of data.' +
+                                                            '\n- Developed a separate system in Excel with an Access database for creating and handling deviation reports for the quality department.' +
+                                                            '\n- Part of the production management' +
+                                                            '\n- Production IT. Responsible for Virtual servers, networks, protocols, backup and VLAN.' +
+                                                            '\n- Recipe Management. Manages article database with all information required for product labelling.' +
+                                                            '\n- Ostkoll. A knowledge database with pictures that I was responsible for.')">Falbygdens Ost</h4>
+                    <p>Superuser</p>
+                </div>
+
+                <div class="timeline-item" data-dates="Jan 2008 - Mar 2015">
+                    <h4 class="work-link" onclick="openModal('Falbygdens Ost',
+                                                            'Lean-coordinator & Orderflex Admin:' +
+                                                            '\n- Orderflex. Responsible for the software, article data, label design and controls functions in printers.' +
+                                                            '\n- Handle Excel with VBA programming, functions, diagrams and presentation of data.' +
+                                                            '\n- Developed a separate system in Excel with an Access database for creating and handling deviation reports for the quality department.' +
+                                                            '\n- Part of the production management' +
+                                                            '\n- Led improvement teams in Lean production. Everything from machine maintenance to quality assurance, data collection and 5S' +
+                                                            '\n- Picked customer orders and price-marked cheese.')">Falbygdens Ost</h4>
+                    <p>Lean-coordinator & Orderflex Admin</p>
+                </div>
+
+                <div class="timeline-item" data-dates="Aug 2005 - Jan 2008">
+                    <h4 class="work-link" onclick="openModal('Falbygdens Ost',
+                                                            'Warehouse manager:' +
+                                                            '\n- Responsible for storing cheese. It meant control over about 250 article numbers.' +
+                                                            '\n- Reporting of production orders.' +
+                                                            '\n- Receive goods and delivery of goods.')">Falbygdens Ost</h4>
+                    <p>Warehouse manager</p>
+                </div>
+
+                <div class="timeline-item" data-dates="Jul 2004 - Aug 2005">
+                    <h4 class="work-link" onclick="openModal('Falbygdens Ost',
+                                                            'Warehouse worker:' +
+                                                            '\n- Manual price labelling of cheeses according to customer order.' +
+                                                            '\n- Operator. Semi-automatic machine labelling.')">Falbygdens Ost</h4>
+                    <p>Warehouse worker</p>
+                </div>
+
+                <div class="timeline-item" data-dates="1995 - 2022">
+                    <h4 class="work-link" onclick="openModal('Ahlinco AB',
+                                                            'Goldsmith:' +
+                                                            '\n (My father`s business)' +
+                                                            '\n- Goldsmith. Repair and new production of jewellery in gold and silver.' +
+                                                            '\n- Hand engraving. Also involves fitting gemstones.')">Ahlinco AB</h4>
+                    <p>Goldsmith</p>
+                </div>
+
+                <div class="timeline-item" data-dates="2009 - 2012">
+                    <h4 class="work-link" onclick="openModal('Studiefrämjandet',
+                                                            'Studio & sound technician:' +
+                                                            '\n- Recorded bands and musicians in the sound studio. This involved setting up drums, amplifiers, vocals and peripherals.' +
+                                                            '\n- Cubase. The software used for recording.')">Studiefrämjandet</h4>
+                    <p>Studio & sound technician</p>
+                </div>
+
+                <div class="timeline-item" data-dates="2003 - 2004">
+                    <h4 class="work-link" onclick="openModal('Stenstorpskolan',
+                                                            'Teacher:' +
+                                                            '\n- Helped the students who had difficulty in certain subjects. Mainly mathematics and English.' +
+                                                            '\n- Substitute in many other subjects such as music, wood- and metal crafts and language Swedish.' +
+                                                            '\n- Substitute in many subjects, but mainly in the practical ones such as music and wood and metal crafts.')">Högstadieskolan Stenstorp</h4>
                     <p>Teacher</p>
                 </div>
+                
+                <div class="timeline-item" data-dates="2000 - 2004">
+                    <h4 class="work-link" onclick="openModal('Western Farm, Boden',
+                                                            'Stuntman:' +
+                                                            '\n- Show artist. Acted and lived like a Cowboy in a Wild West city. Acted with and in front of an audience.' +
+                                                            '\n- Stuntman. Daily live shows containing pyrotechnics, fights and high falls.')">Western Farm, Boden</h4>
+                    <p>Stuntman</p>
+                </div>
+
+                <div class="timeline-item" data-dates="2000 - 2004">
+                    <h4 class="work-link" onclick="openModal('Falköping Fx',
+                                                            'Teacher:' +
+                                                            '\n- Actor. Played many different characters on stage and in front of the camera.' +
+                                                            '\n- Stuntman. Very knowledgeable about fire, fall technique, high falls and sword fights.' +
+                                                            '\n- Security officer. Responsible for safety on and around the stage.' +
+                                                            '\n- Director. Directing a live show. Sound and lighting.' +
+                                                            '\n- Film and photo. Both camera handling and digital finishing of special effects.' +
+                                                            '\n- Pyrotechnician. Handles pyrotechnics in the form of both fireworks and stage effects.')">Falköping Fx</h4>
+                    <p>Show artist/Stuntman</p>
+                </div>
+
+                <div class="timeline-item" data-dates="2001 - 2003">
+                    <h4 class="work-link" onclick="openModal('Cami AB',
+                                                            'IT Manager:' +
+                                                            '\n- Network technician. Responsible for server, backup and PCs.' +
+                                                            '\n- Webmaster. Created a website that I maintained and administered.' +
+                                                            '\n- Picked sales orders. Packaging and delivery.')">Cami AB</h4>
+                    <p>IT Manager</p>
+                </div>
+
             </div>
         </div>
-        <div class="col-md-8 bg-color-three-reasons section-column">
+        <div class="col-md-8 bg-color-three-reasons section-column, scrolling">
             <div class="row">
                 <div class="col">
                     <h3 class="section-heading uppercase">My Skills</h3>
@@ -168,15 +289,15 @@
                         <span class="progress-type">SQL</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="60" aria-valuemin="0"
-                            aria-valuemax="100" style="width:65%;">
-                            <span class="sr-only">60% complete</span>
+                        <div class="progress-bar bg-success" role="progressbar" aria-valuenow="40" aria-valuemin="0"
+                            aria-valuemax="100" style="width:40%;">
+                            <span class="sr-only">40% complete</span>
                         </div>
-                        <span class="progress-type">React</span>
+                        <span class="progress-type">Flask</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="65" aria-valuemin="0"
-                            aria-valuemax="100" style="width:65%;">
+                        <div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0"
+                            aria-valuemax="100" style="width:50%;">
                             <span class="sr-only">50% complete</span>
                         </div>
                         <span class="progress-type">Django</span>
@@ -233,6 +354,30 @@
             </div>
         </div>
     </footer>
+
+    <div class="modal-background" id="modalBackground">
+        <div class="modal-content">
+            <span class="close-icon hvr-icon" onclick="closeModal()"><i class="fas fa-circle-xmark hvr-icon"></i></span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the modal and populate it with content
+        function openModal(title, description) {
+            document.getElementById("modalTitle").innerHTML = title;
+            // Replace newlines with HTML line breaks
+            description = description.replace(/\n/g, '<br>');
+            document.getElementById("modalDescription").innerHTML = description;
+            document.getElementById("modalBackground").style.display = "flex";
+        }
+
+        // Function to close the modal
+        function closeModal() {
+            document.getElementById("modalBackground").style.display = "none";
+        }
+    </script>
 </body>
 
 </html>
