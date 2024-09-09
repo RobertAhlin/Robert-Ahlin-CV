@@ -22,6 +22,10 @@
     background-color: #9b59b6;
 }
 
+.bg-color-education-history {
+    background-color: #9e3636;
+}
+
 .bg-color-contact {
     background-color: #ffffff;
 }
@@ -55,8 +59,8 @@
     background-color: #1c4a6c;
 }
 
-.ui-menu-color-interests {
-    background-color: #e74c3c;
+.ui-menu-color-education {
+    background-color: #9e3636;
 }
 
 
