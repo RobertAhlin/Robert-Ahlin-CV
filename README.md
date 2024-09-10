@@ -11,6 +11,7 @@ Visit the live version at: http://www.ahlin.org
 The page is available in both Swedish and English.
 
 Latest updates:
+- Uplaod updated CV as pdf.
 - Changed profile picture.
 - Fixed contact forms.
 - Fixed social media icons in footer.
@@ -18,4 +19,4 @@ Latest updates:
 - Added option to select Swedish (SV) or English (EN) langage.
 
 Future development and fix:  
-- Uplaod updated CV as pdf.
+- Make code DRY - Header, footer and Navbar.
