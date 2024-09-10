@@ -15,63 +15,48 @@ function userInformationHTML(user) {
 }
 
 function repoInformationHTML(repos) {
-    if (repos.length == 0) {
+    if (repos.length === 0) {
         return `<div class="clearfix repo-list">No repos!</div>`;
     }
 
-    var listItemsHTML = repos.map(function (repo) {
-        return `<li>
+    // Generate the grid structure for repos
+    var repoGridHtml = repos.map(function (repo) {
+        return `<div class="repo-grid-item">
                     <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-                </li>`;
+                </div>`;
     });
 
-    return `<div class="clearfix repo-list">
-                <p>
-                    <strong>Repo List:</strong>
-                </p>
-                <ul>
-                    ${listItemsHTML.join("\n")}
-                </ul>
-            </div>`;
+    return repoGridHtml.join("");  // Join the array into a string of HTML
 }
 
-function fetchGitHubInformation(event) {
-    $("#gh-user-data").html("");
-    $("#gh-repo-data").html("");
+function fetchGitHubInformation() {
+    const username = document.getElementById("gh-username").value; // Get the GitHub username
+    const userUrl = `https://api.github.com/users/${username}`; // GitHub user API endpoint
+    const repoUrl = `https://api.github.com/users/${username}/repos`; // GitHub repos API endpoint
 
-    var username = $("#gh-username").val();
-    if (!username) {
-        $("#gh-user-data").html(`<h2>Please enter a GitHub username</h2>`);
-        return;
-    }
+    // Fetch user information from GitHub API
+    fetch(userUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Render user information
+            const userDataHtml = `
+                <h2>${data.name} (@<a href="${data.html_url}" target="_blank">${data.login}</a>)</h2>
+                <p>Repos: ${data.public_repos} | Followers: ${data.followers} | Following: ${data.following}</p>
+            `;
+            document.getElementById("gh-user-data").innerHTML = userDataHtml;
+        });
 
-    $("#gh-user-data").html(
-        `<div id="loader">
-            <img src="assets/css/loader.gif" alt="loading..." />
-        </div>`);
-
-    $.when(
-        $.getJSON(`https://api.github.com/users/${username}`),
-        $.getJSON(`https://api.github.com/users/${username}/repos`)
-    ).then(
-        function (firstResponse, secondResponse) {
-            var userData = firstResponse[0];
-            var repoData = secondResponse[0];
-            $("#gh-user-data").html(userInformationHTML(userData));
-            $("#gh-repo-data").html(repoInformationHTML(repoData));
-        },
-        function (errorResponse) {
-            if (errorResponse.status === 404) {
-                $("#gh-user-data").html(
-                    `<h2>No info found for user ${username}</h2>`);
-            } else if (errorResponse.status === 403) {
-                var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset') * 1000);
-                $("#gh-user-data").html(`<h4>Too many requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`);
-            } else {
-                console.log(errorResponse);
-                $("#gh-user-data").html(
-                    `<h2>Error: ${errorResponse.responseJSON.message}</h2>`);
-            }
+    // Fetch repository information from GitHub API
+    fetch(repoUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Use repoInformationHTML to generate grid layout
+            const repoHtml = repoInformationHTML(data);
+            document.getElementById("gh-repo-data").innerHTML = repoHtml;
+        })
+        .catch(error => {
+            console.error('Error fetching repositories:', error);
+            document.getElementById("gh-repo-data").innerHTML = "<p>Failed to load repositories. Please try again later.</p>";
         });
 }
 

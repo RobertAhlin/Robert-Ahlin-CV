@@ -1,3 +1,5 @@
+/* Syle.css */
+
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 /*--------------------------------------------Colors*/
@@ -403,7 +405,6 @@ footer .cv-pdf i:hover {
 .center-form {
     padding-top: 10px;
     margin: 0 auto;
-    max-width: 70%;
 }
 
 button[type="submit"] {
@@ -464,14 +465,15 @@ div#map {
 }
 
 /* Github page styling */
+/* Container for the GitHub form and content */
 .center-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
 }
 
+/* Input field for GitHub username */
 #gh-username {
     width: 60%;
     padding: 10px;
@@ -481,14 +483,16 @@ div#map {
     border-radius: 5px;
 }
 
+/* Styling for GitHub user information */
 #gh-user-data {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     text-align: center;
 }
 
+/* Repo Grid: Ensures 4 columns per row */
 .repo-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     padding: 20px;
     max-width: 1200px;
@@ -496,28 +500,31 @@ div#map {
     margin: 0 auto;
 }
 
+/* Individual grid items (each repo) */
 .repo-grid-item {
     background-color: #f8f9fa;
-    padding: 5px;
+    padding: 5px 10px;
     text-align: center;
     border-radius: 5px;
     transition: background-color 0.5s;
 }
 
+/* Hover effect on repo items */
 .repo-grid-item:hover {
     background-color: #e2e6ea;
 }
 
+/* Repo links */
 .repo-grid-item a {
     text-decoration: none;
     color: #007bff;
     font-size: 16px;
 }
 
+/* Hover effect on repo links */
 .repo-grid-item a:hover {
     text-decoration: underline;
 }
-
 
 
 /*--------------------------------------------Media Queries*/
@@ -533,6 +540,5 @@ div#map {
         padding-top: 30px;
         min-height: 240px;
         margin: 0 auto;
-        max-width: 50%;
     }
 }
