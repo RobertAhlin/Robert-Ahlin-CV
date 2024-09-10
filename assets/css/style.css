@@ -189,6 +189,23 @@ header {
     letter-spacing: 2px;
 }
 
+/* Language switch */
+.language-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 16px;
+}
+
+.language {
+    text-decoration: none;
+    color: #ffffff; /* Or the color that matches your theme */
+    margin: 0 5px;
+}
+
+.language:hover {
+    color: #ffcc00; /* Highlight color on hover */
+}
 
 /*--------------------------------------------Hover.css*/
 

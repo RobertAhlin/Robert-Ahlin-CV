@@ -1,35 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Robert Ahlin</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-        type="text/css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-        type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("sKLGmElmQrqhdKkiF");
-        })();
-    </script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../assets/js/github-information.js"></script>
+    <title>Robert Ahlin</title>
 </head>
 
 <body>
     <header>
         <div class="row no-gutters">
             <a href="index.html" class="col-md-4 logo">
-
+    
             </a>
             <div class="col-md-8">
                 <div class="row no-gutters bg-color-name-title">
@@ -74,28 +66,19 @@
     <section class="container-fluid">
         <div class="row bg-color-contact">
             <div class="col">
-                <h3 class="contact-heading uppercase text-center">Got a project in mind?</h3>
-                <h5 class="uppercase text-center">Let's work together!</h5>
-                <h5 class="text-center">(Form function not yet implemented.)</h5>
-    
+                <h3 class="contact-heading uppercase text-center">View My GitHub Projects</h3>
+                <h5 class="uppercase text-center">You can also search on other user profiles</h5>
+
                 <div class="center-form">
-                    <form onsubmit="return sendMail(this);">
-                        <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
-                        <input type="email" name="email" id="emailaddress" class="form-control" placeholder="Email"
-                            required />
-                        <textarea rows="5" name="messagelines" id="messagelines" class="form-control"
-                            placeholder="Message" required></textarea>
-                        <div class="form-row text-center">
-                            <div class="col">
-                                <button type="submit" class="btn btn-secondary">Send Project Request</button>
-                            </div>
-                        </div>
-                    </form>
+                    <input type="text" id="gh-username" value="RobertAhlin" oninput="fetchGitHubInformation()" />
+                    <div id="gh-user-data"></div>
+                    <div id="gh-repo-data"></div>
+
                 </div>
-    
+
             </div>
         </div>
-    
+
     </section>
     <footer class="container-fluid">
         <div id="footer-details" class="row">
@@ -103,8 +86,7 @@
                 <h5 class="uppercase general-sub">About</h5>
                 <p class="inline-block">
                     Agile Full Stack Web Developer. Skilled in everything from HTML to Heroku. The capacity for structural
-                    and
-                    design thinking. I love developing good UI and UX.
+                    and design thinking. I love developing good UI and UX.
                 </p>
             </div>
             <div class="col-sm-4">
@@ -143,7 +125,6 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/sendEmail.js"></script>
 </body>
 
 </html>
