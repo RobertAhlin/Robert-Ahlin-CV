@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../assets/css/style.css" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="../assets/js/github-information.js"></script>
@@ -27,7 +27,10 @@
                 <div class="row no-gutters bg-color-name-title">
                     <div class="col heading">
                         <h1 class="name">Robert Ahlin</h1>
-                        <h2 class="title">Agile Fullstack Developer with Expertise in Information Security</h2>
+                        <h2 class="title">Agil Fullstackutvecklare med expertis inom informationssäkerhet</h2>
+                    </div>
+                    <div class="language-switch">
+                        <a href="#" class="language">SV</a> | <a href="../github.html" class="language">EN</a>
                     </div>
                 </div>
                 <div class="row no-gutters">
@@ -35,27 +38,27 @@
                         <ul id="nav" class="list-inline menucontainer row">
                             <li class="col-6 col-sm-2 ui-menu-color-home menuitem">
                                 <a href="index.html" class="hvr-sweep-to-bottom"><i class="fa fa-home"
-                                        aria-hidden="true"></i><span>Home</span></a>
+                                        aria-hidden="true"></i><span>Hem</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-resume menuitem">
                                 <a href="resume.html" class="hvr-sweep-to-bottom"><i class="fa fa-graduation-cap"
-                                        aria-hidden="true"></i><span>Resume</span></a>
+                                        aria-hidden="true"></i><span>CV</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-contact menuitem">
                                 <a href="contact.html" class="hvr-sweep-to-bottom"><i class="fa fa-comment-o"
-                                        aria-hidden="true"></i><span>Contact</span></a>
+                                        aria-hidden="true"></i><span>Kontakt</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-education menuitem">
                                 <a href="education.html" class="hvr-sweep-to-bottom"><i class="fa fa-users"
-                                        aria-hidden="true"></i><span>Education</span></a>
+                                        aria-hidden="true"></i><span>Utbildning</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-github menuitem">
                                 <a href="github.html" class="hvr-sweep-to-bottom"><i class="fa-brands fa-github"
                                         aria-hidden="true"></i><span>GitHub</span></a>
                             </li>
                             <li class="col-6 col-sm-2 ui-menu-color-download menuitem">
-                                <a href="assets/cv/CV_Robert_Ahlin-Oct_2023_EN.pdf" target="_blank" class="hvr-sweep-to-bottom"><i
-                                        class="fa fa-download" aria-hidden="true"></i><span>Download CV</span></a>
+                                <a href="../assets/cv/CV_Robert_Ahlin_SV.pdf" target="_blank" class="hvr-sweep-to-bottom"><i
+                                        class="fa fa-download" aria-hidden="true"></i><span>Ladda ner CV</span></a>
                             </li>
                         </ul>
                     </div>
@@ -66,16 +69,16 @@
     <section class="container-fluid">
         <div class="row bg-color-contact">
             <div class="col">
-                <h3 class="contact-heading uppercase text-center">View My GitHub Projects</h3>
-                <h5 class="uppercase text-center">You can also search on other user profiles</h5>
+                <h3 class="contact-heading uppercase text-center">Visa Mina GitHub-projekt</h3>
+                <h5 class="uppercase text-center">Du kan också söka efter andra användarprofiler</h5>
 
                 <div class="center-form">
                     <input type="text" id="gh-username" value="RobertAhlin" oninput="fetchGitHubInformation()" />
                     <div id="gh-user-data"></div>
-                    <div id="gh-repo-data"></div>
-
+                    <div id="gh-repo-data" class="repo-grid"></div> <!-- Changed to repo-grid for grid styling -->
                 </div>
-
+                
+                
             </div>
         </div>
 
@@ -83,25 +86,24 @@
     <footer class="container-fluid">
         <div id="footer-details" class="row">
             <div class="col-sm-4">
-                <h5 class="uppercase general-sub">About</h5>
+                <h5 class="uppercase general-sub">Om</h5>
                 <p class="inline-block">
-                    Agile Full Stack Web Developer. Skilled in everything from HTML to Heroku. The capacity for structural
-                    and design thinking. I love developing good UI and UX.
+                    Agil Full Stack Webbutvecklare. Skicklig i allt från HTML till Heroku. Kapacitet för strukturellt
+                    och designmässigt tänkande. Jag älskar att utveckla bra UI och UX.
                 </p>
             </div>
             <div class="col-sm-4">
-                <h5 class="uppercase general-sub">Download</h5>
+                <h5 class="uppercase general-sub">Ladda ner</h5>
                 <p class="inline-block">
-                    Need a printable version of my CV? Download it here.
-                    <a href="assets/cv/CV_Robert_Ahlin-Oct_2023_EN.pdf" target="_blank" class="cv-pdf">
+                    Behöver du en utskrivbar version av mitt CV? Ladda ner det här.
+                    <a href="../assets/cv/CV_Robert_Ahlin_SV.pdf" target="_blank" class="cv-pdf">
                         <i class="fa fa-download" aria-hidden="true"></i>
-                        <span class="sr-only">Download link.</span>
+                        <span class="sr-only">Ladda ner länk.</span>
                     </a>
                 </p>
             </div>
             <div class="col-sm-4">
-                <h5 class="uppercase general-sub">Social</h5>
-                <p class="inline-block">(In swedish)</p>
+                <h5 class="uppercase general-sub">Social Media</h5>
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">
                         <a target="_blank" href="https://www.linkedin.com/in/robert-ahlin/">
