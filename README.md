@@ -1,5 +1,8 @@
 Welcome,
 
-Was from the start a lession part from Code Institute to train Bootstrap4. I made the page personal instead of generic. As I want to have a site that can show my skills with a CV.
+Was from the start a lession part from Code Institute to train Bootstrap4. 
+I made the page personal instead of generic. As I want to have a site that can show my skills with a CV I have continously developed it.
+
+It's aslo possible to visit the live version at: http://www.ahlin.org
 
 
