@@ -1,7 +1,7 @@
 Welcome,
 
-This project was from the start a lession in my full stack developer course in Code Institute to train Bootstrap4. 
-I made the page personal instead of generic. As I want to have a site that can show my skills with a CV I have continously developed it.
+This project was from the start a to train Bootstrap4. 
+I made the page personal instead of generic. As I want to have a site that can show my skills with a CV, I have continously developed it.
 
 <img alt="Site Example" src="assets/images/site_example.png">
 
@@ -20,3 +20,4 @@ Latest updates:
 
 Future development and fix:  
 - Make code DRY - Header, footer and Navbar.
+- Add project and reference objects.
